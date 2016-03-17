@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<testCaseList>
+	<testDir>./testContents/testData</testDir>
+    <outputDirPath>./testResults</outputDirPath>
+	<!-- mode 0 taxonomy -> xmlss [default] 
+	          1 xmlss -> taxonomy 
+			  2 taxonomy -> xmlss -> taxonomy 
+			  3 taxonomy file list -->
+	<testCase>
+		<testName>XMLSSTest1</testName>
+		<inputFilePath>taxonomy01/001/input/sample3_balancesheet.xsd</inputFilePath>
+		<xmlssLoadConf>taxonomy01/001/conf/XMLSSLoad.conf</xmlssLoadConf>
+		<xmlssReportConf>taxonomy01/001/conf/XMLSSReport.conf</xmlssReportConf>
+		<mode>0</mode>
+	</testCase>
+	<testCase>
+		<testName>XMLSSTest2</testName>
+		<inputFilePath>taxonomy02/001/input/sample1.xlsx</inputFilePath>
+		<xmlssLoadConf>taxonomy02/001/conf/XMLSSLoad.conf</xmlssLoadConf>
+		<xmlssReportConf>taxonomy02/001/conf/XMLSSReport.conf</xmlssReportConf>
+		<mode>1</mode>
+	</testCase>
+	<testCase>
+		<testName>XMLSSTest3</testName>
+		<inputFilePath>taxonomy01/001/input/sample3_balancesheet.xsd</inputFilePath>
+		<xmlssLoadConf>taxonomy02/001/conf/XMLSSLoad.conf</xmlssLoadConf>
+		<xmlssReportConf>taxonomy02/001/conf/XMLSSReport.conf</xmlssReportConf>
+		<mode>2</mode>
+	</testCase>
+	<testCase>
+		<testName>XMLSSTest4</testName>
+		<inputFilePath>taxonomy01/001/input/taxonomyFileList.txt</inputFilePath>
+		<xmlssLoadConf>taxonomy01/001/conf/XMLSSLoad.conf</xmlssLoadConf>
+		<xmlssReportConf>taxonomy01/001/conf/XMLSSReport.conf</xmlssReportConf>
+		<mode>3</mode>
+	</testCase>
+</testCaseList>
