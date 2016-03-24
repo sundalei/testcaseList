@@ -15,7 +15,7 @@ public class TestCaseCreator {
 	private List<String> list = new ArrayList<String>();
 	
 	public static void main(String[] args) throws Exception {
-		String testDir = "F:/TestData";
+		String testDir = "D:/svn/code/XMLSS/xmlss_test/testContents/testdata";
 		String outputDirPath = "F:/TestResults";
 		
 		TestCaseCreator creator = new TestCaseCreator();
@@ -97,7 +97,7 @@ public class TestCaseCreator {
 		taxonomyDiffConfElement.setText(getTaxonomyDiffConf(testDir, path));
 		
 		Element modeElement = testCaseElement.addElement("mode");
-		modeElement.setText(getValue( path));
+		modeElement.setText(getValue(getInputFilePath(testDir, path)));
 	}
 	
 	private String getTestName(String path) {
@@ -157,7 +157,7 @@ public class TestCaseCreator {
 		
 		for(int i = 0, count = files.length; i < count; i++) {
 			File f = files[i];
-			if(f.getName().equals("XMLSSLoad.conf")) {
+			if(f.getName().equals("XMLSSReport.conf")) {
 				String temp = f.getAbsolutePath();
 				temp = temp.substring(testDir.length() + 1);
 				temp = processTemp(temp);
@@ -178,7 +178,7 @@ public class TestCaseCreator {
 		
 		for(int i = 0, count = files.length; i < count; i++) {
 			File f = files[i];
-			if(f.getName().equals("XMLSSReport.conf")) {
+			if(f.getName().equals("XMLSSLoad.conf")) {
 				String temp = f.getAbsolutePath();
 				temp = temp.substring(testDir.length() + 1);
 				temp = processTemp(temp);
